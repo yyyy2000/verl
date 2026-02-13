@@ -1,7 +1,7 @@
 Ascend Quickstart
 ===================================
 
-Last updated: 12/11/2025.
+Last updated: 2/13/2026.
 
 我们在 verl 上增加对华为昇腾设备的支持。
 
@@ -67,8 +67,10 @@ DockerFile镜像构建 & 使用
     +---------------+----------------------+
     | triton-ascend | == 3.2.0rc4          |
     +---------------+----------------------+
-    | transformers  | latest release       |
+    | transformers  | == 4.57.6            |
     +---------------+----------------------+
+
+tips: verl is not support transformers transformers 5.0.0 or higher
 
     安装指令：
 
