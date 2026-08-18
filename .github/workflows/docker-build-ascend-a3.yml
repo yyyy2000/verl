@@ -22,7 +22,7 @@ jobs:
   # ============================================================
   build-push-digest:
     name: build-${{ matrix.tag }}
-    if: ${{ github.event_name != 'pull_request' && github.repository_owner == 'verl-project' }}
+    if: ${{ github.event_name != 'pull_request'}}
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-${{ matrix.tag }}
       cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
@@ -141,7 +141,7 @@ jobs:
   # ============================================================
   build-push-digest-v080:
     name: build-v0.8.0-${{ matrix.tag }}
-    if: ${{ github.event_name != 'pull_request' && github.repository_owner == 'verl-project' }}
+    if: ${{ github.event_name != 'pull_request'}}
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-v0.8.0-${{ matrix.tag }}
       cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
